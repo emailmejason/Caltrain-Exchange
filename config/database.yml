@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: caltrain_development
   pool: 5
-  username: admin
-  password:
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +43,13 @@ test:
   encoding: unicode
   database: caltrain_test
   pool: 5
-  username: admin
-  password:
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
 
 production:
   adapter: postgresql
   encoding: unicode
   database: caltrain_production
   pool: 5
-  username: admin
-  password:
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
