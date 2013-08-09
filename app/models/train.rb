@@ -1,3 +1,3 @@
 class Train < ActiveRecord::Base
-  attr_accessible :arrival_time, :departure_time, :trip_id
+  attr_accessible :direction, :number, :schedule
 end
