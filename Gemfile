@@ -11,9 +11,8 @@ gem 'pry-debugger'
 gem 'binding_of_caller'
 gem 'better_errors'
 gem 'meta_request'
-
 gem 'dotenv-rails'
-
+gem 'activerecord-postgres-hstore'
 gem 'roo'
 # Gems used only for assets and not required
 # in production environments by default.
