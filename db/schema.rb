@@ -11,30 +11,5 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130809211920) do
-
-  create_table "trains", :force => true do |t|
-    t.string   "trip_id"
-    t.string   "arrival_time"
-    t.string   "departure_time"
-    t.string   "stop_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  create_table "trips", :force => true do |t|
-    t.integer  "user_id"
-    t.time     "time_start"
-    t.time     "time_end"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.time     "usage"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
+ActiveRecord::Schema.define(:version => 20120809211920) do
 end
