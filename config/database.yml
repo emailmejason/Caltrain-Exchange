@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: caltrain_development
   pool: 5
-  username: caltrain
+  username: admin
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: caltrain_test
   pool: 5
-  username: caltrain
+  username: admin
   password:
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: caltrain_production
   pool: 5
-  username: caltrain
+  username: admin
   password:
