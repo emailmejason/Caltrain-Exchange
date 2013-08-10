@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @offer.user_id %>
+</p>
+
+<p>
+  <b>Train:</b>
+  <%= @offer.train_id %>
+</p>
+
+<p>
+  <b>On station:</b>
+  <%= @offer.on_station %>
+</p>
+
+<p>
+  <b>Off station:</b>
+  <%= @offer.off_station %>
+</p>
+
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>
