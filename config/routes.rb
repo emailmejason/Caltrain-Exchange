@@ -1,10 +1,4 @@
-Caltrain::Application.routes.draw do
-  resources :trips
-
-
-  resources :users
-
-  root :to => 'users#index'
+Caltrain::Application.routes.draw do  root :to => 'users#index'
 
 
 end
