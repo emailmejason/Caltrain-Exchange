@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130809233553) do
+ActiveRecord::Schema.define(:version => 20130810220502) do
+
+  create_table "offers", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "train_id"
+    t.string   "on_station"
+    t.string   "off_station"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "trains", :force => true do |t|
     t.string   "direction"
@@ -22,5 +31,28 @@ ActiveRecord::Schema.define(:version => 20130809233553) do
   end
 
   add_index "trains", ["schedule"], :name => "index_trains_on_schedule"
+
+  create_table "trips", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "train_id"
+    t.string   "on_station"
+    t.string   "off_station"
+    t.integer  "wifi_duration"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username",                     :null => false
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+  end
+
+  add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
 
 end
