@@ -11,23 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :train_id %><br />
-    <%= f.number_field :train_id %>
-  </div>
+
   <div class="field">
     <%= f.label :on_station %><br />
     <%= f.text_field :on_station %>
+  </div>
+  <div class="field">
+    <%= f.label :on_station_time %><br />
+    <%= f.text_field :on_station_time%>
   </div>
   <div class="field">
     <%= f.label :off_station %><br />
     <%= f.text_field :off_station %>
   </div>
   <div class="actions">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.submit %>
   </div>
 <% end %>

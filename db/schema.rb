@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130811014114) do
+ActiveRecord::Schema.define(:version => 20130812005740) do
 
   create_table "offers", :force => true do |t|
     t.integer  "user_id"
     t.integer  "train_id"
     t.string   "on_station"
     t.string   "off_station"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "on_station_time"
+    t.string   "off_station_time"
   end
 
   create_table "trains", :force => true do |t|
@@ -38,9 +40,10 @@ ActiveRecord::Schema.define(:version => 20130811014114) do
     t.string   "on_station"
     t.string   "off_station"
     t.integer  "wifi_duration"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "on_station_time"
+    t.string   "off_station_time"
   end
 
   create_table "users", :force => true do |t|
