@@ -40,10 +40,17 @@ class OffersController < ApplicationController
   # POST /offers
   # POST /offers.json
   def create
-    @offer = Offer.new(params[:offer])
+    @offer = Offer.create(params[:offer])
+    @start_time=@offer.on_station_time
+    @start_station=@offer.on_station
+    @matching_trains=Train.where("schedule-> '#{@start_time}' = '#{@start_station}'")
+    @train_id=@matching_trains.first.id
+    @stop_time=@matching_trains.first.schedule.key(@offer.off_station)
+
+
 
     respond_to do |format|
-      if @offer.save
+      if @offer.update_attributes(:train_id=>@train_id, :off_station_time=>@stop_time)
         format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
         format.json { render json: @offer, status: :created, location: @offer }
       else

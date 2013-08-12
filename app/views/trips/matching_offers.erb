@@ -1,0 +1,5 @@
+
+<br>
+<% @offers_a.each do |x| %>
+<%= User.find(x.user_id).username %>
+<% end %>
