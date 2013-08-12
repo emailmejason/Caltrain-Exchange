@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Train</th>
+    <th>User Email</th>
+    <th>Train Number</th>
     <th>On station</th>
     <th>Off station</th>
     <th>Wifi duration</th>
@@ -14,8 +14,9 @@
 
 <% @trips.each do |trip| %>
   <tr>
-    <td><%= trip.user_id %></td>
-    <td><%= trip.train_id %></td>
+
+
+    <td><%= User.find(trip.user_id).email %></td>
     <td><%= trip.on_station %></td>
     <td><%= trip.off_station %></td>
     <td><%= trip.wifi_duration %></td>

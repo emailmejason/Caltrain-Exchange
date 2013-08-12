@@ -2,44 +2,9 @@ class TripsController < ApplicationController
   # GET /trips
   # GET /trips.json
   def matching_offers
-
-
     @trip = Trip.find(params[:id])
-    @trip_on_time=@trip.on_station_time.split(':')[1].to_f/60 +@trip.on_station_time.split(':')[0].to_f
-    @trip_off_time=@trip.off_station_time.split(':')[1].to_f/60 +@trip.off_station_time.split(':')[0].to_f
-    @duration=@trip.wifi_duration.to_f/60
-    @offers=Offer.all
-    @offers_a = []
-
-      @offers.each do |offer|
-        @offer_on_time=offer.on_station_time.split(':')[1].to_f/60 +offer.on_station_time.split(':')[0].to_f
-        @offer_off_time=offer.off_station_time.split(':')[1].to_f/60 +offer.off_station_time.split(':')[0].to_f
-
-        if @offer_off_time - @offer_on_time > @duration && @offer_on_time<@trip_off_time-@duration
-          @offers_a.push(offer)
-        end
-      end
-      return @offers_a
-
-
-
-      # offer_a.each do |offer|
-      #   @offer_b = []
-      #   if offer.on_station_time <= trip.on_station_time and offer.off_station_time>= trip.on_station_time+wifi_duration
-      #     offer_b.push(offer)
-      #   end
-      # end
-
-      # offer_b.each do |offer|
-      #   @matching_offers = []
-      #   if offer.on_station_time>= trip.on_station_time and offer.off_station_time>=trip.on_station_time
-      #     matching_offers.push(offer)
-      #   end
-      # end
-    end
-
-
-
+    @matching_offers = @trip.matching_offers
+  end
 
   def index
     @trips = Trip.all

@@ -1,5 +1,54 @@
+<h1>Trip:</h1>
+<p><%= @trip.on_time %></p>
+<p><%= @trip.off_time %></p>
+<p><%= @trip.duration %></p>
 
-<br>
-<% @offers_a.each do |x| %>
-<%= User.find(x.user_id).username %>
-<% end %>
+<hr>
+
+<style type="text/css">
+td, th{
+  border: 1px solid #333;
+}
+</style>
+
+<table>
+  <tr>
+    <th></th>
+    <td>Email</td>
+    <th>Wifi Duration</th>
+    <th>On Time</th>
+    <th>Off Time</th>
+  </tr>
+
+  <% @matching_offers.each do |offer| %>
+    <tr>
+      <td><%= offer.user.email %></td>
+      <td><%= offer.id %></td>
+      <td><%= offer.duration %></td>
+      <td><%= offer.on_time %></td>
+      <td><%= offer.off_time %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<table>
+  <tr>
+    <th></th>
+    <td>Email</td>
+    <th>Duration</th>
+    <th>On Time</th>
+    <th>Off Time</th>
+  </tr>
+
+  <% Offer.all.each do |offer| %>
+    <tr>
+      <td><%= offer.user.email %></td>
+      <td><%= offer.id %></td>
+      <td><%= offer.duration %></td>
+      <td><%= offer.on_time %></td>
+      <td><%= offer.off_time %></td>
+    </tr>
+  <% end %>
+</table>

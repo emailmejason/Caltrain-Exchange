@@ -2,8 +2,9 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Train</th>
+    <th>User id</th>
+    <th>User Email</th>
+    <th>Train Number</th>
     <th>On station</th>
     <th>Off station</th>
     <th></th>
@@ -14,7 +15,9 @@
 <% @offers.each do |offer| %>
   <tr>
     <td><%= offer.user_id %></td>
-    <td><%= offer.train_id %></td>
+
+    <td><%= User.find(offer.user_id).email %></td>
+    <td><%= Train.find(offer.train_id).number %></td>
     <td><%= offer.on_station %></td>
     <td><%= offer.off_station %></td>
     <td><%= link_to 'Show', offer %></td>
