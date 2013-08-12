@@ -45,11 +45,12 @@ class TripsController < ApplicationController
     @start_station=@trip.on_station
     @matching_trains=Train.where("schedule-> '#{@start_time}' = '#{@start_station}'")
     @train_id=@matching_trains.first.id
+    @stop_time=@matching_trains.first.schedule.key(@trip.off_station)
 
 
 
     respond_to do |format|
-      if @trip.update_attribute(:train_id,@train_id)
+      if @trip.update_attributes(:train_id=>@train_id, :off_station_time=>@stop_time)
         format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
         format.json { render json: @trip, status: :created, location: @trip }
       else
