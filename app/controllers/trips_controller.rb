@@ -1,13 +1,17 @@
 class TripsController < ApplicationController
+  skip_before_filter :require_login, :only => [:index]
+
+
   # GET /trips
   # GET /trips.json
   def matching_offers
     @trip = Trip.find(params[:id])
     @matching_offers = @trip.matching_offers
+    @share = Share.new
   end
 
   def index
-    @trips = Trip.all
+    @trips = Trip.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb

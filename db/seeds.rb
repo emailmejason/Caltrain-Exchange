@@ -51,7 +51,33 @@ trains.each do |x|
   else
     x.update_attribute(:direction,"n")
   end
+
+
 end
+
+User.create!(username: "David Smith",email: "davidsmith@gmail.com", password:"1")
+User.create!(username: "Michael Jones",email: "michaeljones@gmail.com", password:"1")
+User.create!(username: "Chris Lee",email: "chrislee@gmail.com", password:"1")
+User.create!(username: "Mike Lim",email: "mikelim@gmail.com", password:"1")
+User.create!(username: "Mark Brown",email: "markbrown@gmail.com", password:"1")
+User.create!(username: "Paul Williams",email: "paulwilliams@gmail.com", password:"1")
+User.create!(username: "Dan Stewart",email: "danstewart@gmail.com", password:"1")
+User.create!(username: "James Miller",email: "jamesmiller@gmail.com", password:"1")
+User.create!(username: "Maria Johnson",email: "mariajohnson@gmail.com", password:"1")
+User.create!(username: "John James",email: "johnjames@gmail.com", password:"1")
+
+
+Trip.create!(user_id: 1, train_id:3 , on_station: "Mountain View", off_station: "Millbrae" , wifi_duration:"30" , on_station_time:"5:24:00" , off_station_time:"6:08:00" )
+
+
+
+Offer.create!(user_id: 2, train_id:3 , on_station: "San Antonio", off_station: "San Francisco" , on_station_time:"5:28:00" , off_station_time:"6:36:00" )
+Offer.create!(user_id: 3, train_id:3 , on_station: "Menlo Park", off_station: "Millbrae", on_station_time:"5:39:00" , off_station_time:"6:08:00" )
+Offer.create!(user_id: 4, train_id:3 , on_station: "Mountain View", off_station: "Millbrae", on_station_time:"5:24:00" , off_station_time:"6:08:00" )
+Offer.create!(user_id: 5, train_id:3 , on_station: "Tamien", off_station: "San Jose", on_station_time:"4:58:00" , off_station_time:"5:05:00" )
+
+
+
 
 
 

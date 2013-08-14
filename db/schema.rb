@@ -1,3 +1,4 @@
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,7 +12,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812005740) do
+ActiveRecord::Schema.define(:version => 20130813013923) do
 
   create_table "offers", :force => true do |t|
     t.integer  "user_id"
@@ -22,6 +23,17 @@ ActiveRecord::Schema.define(:version => 20130812005740) do
     t.datetime "updated_at",       :null => false
     t.string   "on_station_time"
     t.string   "off_station_time"
+  end
+
+  create_table "shares", :force => true do |t|
+    t.integer  "trip_id"
+    t.integer  "offer_id"
+    t.integer  "wifi_rating"
+    t.integer  "user_rating"
+    t.string   "network_name"
+    t.string   "network_password"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "trains", :force => true do |t|

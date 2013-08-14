@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trip_id: 1
+  offer_id: 1
+  wifi_rating: 1
+  user_rating: 1
+  network_name: MyString
+  network_password: MyString
+
+two:
+  trip_id: 1
+  offer_id: 1
+  wifi_rating: 1
+  user_rating: 1
+  network_name: MyString
+  network_password: MyString

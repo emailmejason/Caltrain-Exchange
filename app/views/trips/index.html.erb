@@ -1,32 +1,24 @@
-<h1>Listing trips</h1>
+<h1>Need Wifi</h1>
 
-<table>
-  <tr>
-    <th>User Email</th>
-    <th>Train Number</th>
-    <th>On station</th>
-    <th>Off station</th>
-    <th>Wifi duration</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="aa">
+    <div>Train Number</div>
+    <div>On station</div>
+    <div>Off station</div>
+    <div>Wifi duration</div>
+
 
 <% @trips.each do |trip| %>
-  <tr>
 
 
-    <td><%= User.find(trip.user_id).email %></td>
-    <td><%= trip.on_station %></td>
-    <td><%= trip.off_station %></td>
-    <td><%= trip.wifi_duration %></td>
-    <td><%= link_to 'Show', trip %></td>
-    <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-    <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div><%= trip.on_station %></div>
+    <div><%= trip.off_station %></div>
+    <div><%= trip.wifi_duration %></div>
+    <div><%= link_to 'Show', trip %></div>
+    <div><%= link_to 'Edit', edit_trip_path(trip) %></div>
+    <div><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+
 <% end %>
-</table>
-
-<br />
+</div>
+<br/>
 
 <%= link_to 'New Trip', new_trip_path %>

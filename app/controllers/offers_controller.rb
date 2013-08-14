@@ -2,7 +2,7 @@ class OffersController < ApplicationController
   # GET /offers
   # GET /offers.json
   def index
-    @offers = Offer.all
+    @offers = Offer.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb

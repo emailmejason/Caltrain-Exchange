@@ -7,13 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", logout_path %>
-  <% else %>
-    <%= link_to "Sign up", signup_path %> or
-    <%= link_to "log in", login_path %>.
-  <% end %>
+   <div id="nav">
+    <div id="login" class="n">
+      <% if current_user %>
+          Logged in as <%= current_user.email %>.
+          <%= link_to "Log out", logout_path %>
+        <% else %>
+          <%= link_to "Sign up", signup_path %> or
+          <%= link_to "log in", login_path %>.
+        <% end %>
+     </div>
+
+    <div>
+      <p id="notice" class="n"><%= notice %></p>
+      <p id="alert"class="n" ><%= alert %></p>
+    </div>
+
+    <div id="offers" class="n"> <%= link_to "Got it", offers_path %> </div>
+    <div id="trips" class="n"> <%= link_to "Need it", trips_path %> </div>
+
+  </div>
+
 
 <%= yield %>
 
