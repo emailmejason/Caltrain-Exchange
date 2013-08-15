@@ -25,6 +25,7 @@
 
     </tr>
 </table>
+  <div><%= link_to 'Official Shares', share_path(@trip) %></div>
 
 <%= form_for(@share) do |f| %>
   <% if @share.errors.any? %>
@@ -40,10 +41,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.hidden_field :trip_id,:value=>100 %>
+    <%= f.hidden_field :trip_id,:value=>@trip.id %>
   </div>
   <div class="field">
-    <%= f.hidden_field :offer_id,:value=>100 %>
+    <%= f.hidden_field :offer_id,:value=>@trip.matching_offers.first.id %>
   </div>
 
   <div class="actions">

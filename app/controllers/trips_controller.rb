@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  skip_before_filter :require_login, :only => [:index]
+  # skip_before_filter :require_login, :only => [:index]
 
 
   # GET /trips

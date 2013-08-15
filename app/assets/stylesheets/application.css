@@ -1,16 +1,46 @@
+body {
+  margin:0;
+  padding:0;
+}
 #nav {
-  border: 1px solid black;
   height: 50px;
+  width: 960px;
+  margin: 50px auto;
+}
 
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+  color: black;
+}
+
+
+.s {
+  float: left;
+  font-size: 35px;
+  font-family: Maven Pro;
+  font-weight: 700;
+  color:red;
 }
 
 .n {
   float: right;
-  margin-right: 10px;
+  margin-right: 60px;
+  font-family: Maven Pro;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
 }
 
-#aa{
+#aa {
   border: 2px solid black;
   margin:  100px;
   clear: both;
+}
+
+img{
+  width:100%;
+  display: block;
 }

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Offer_id:</b>
+  <b>Offer.id:</b>
   <%= @offer.id %>
 </p>
 
@@ -34,6 +34,6 @@
   <%= @offer.off_station_time %>
 </p>
 
-
+<%= link_to 'Shares', share_path(@offer) %> |
 <%= link_to 'Edit', edit_offer_path(@offer) %> |
 <%= link_to 'Back', offers_path %>
