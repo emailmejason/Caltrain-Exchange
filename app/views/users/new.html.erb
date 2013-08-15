@@ -28,3 +28,21 @@
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+
+
+<div id="form">
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <%= text_field_tag :email, params[:email] %>
+      <div class="l">email</div>
+
+    </div>
+    <div class="field">
+      <%= password_field_tag :password %>
+      <div class="l">password</div>
+
+    </div>
+
+    <div class="actions"><%= submit_tag "Log in" %></div>
+  <% end %>
+</div>
