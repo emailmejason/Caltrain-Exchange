@@ -41,7 +41,24 @@ a:active{
   font-weight: 700;
   color:red;
 }
+.signup_quote{
+  font-family: Maven Pro;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  margin-top: 200px;
+  margin-left: 100px;
 
+}
+.signup_quote2{
+  font-family: Maven Pro;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
 .n {
   float: right;
   margin-right: 50px;
@@ -73,4 +90,15 @@ img{
   border: 2px solid black;
   margin: 0 auto;
   width: 400px;
+}
+
+.description{
+  font-family: Maven Pro;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  /*margin-top: 200px;*/
+  margin-left: 300px;
+  float: left;
+
 }

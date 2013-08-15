@@ -1,35 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Trip:</b>
-  <%= @share.trip_id %>
-</p>
-
-<p>
-  <b>Offer:</b>
-  <%= @share.offer_id %>
-</p>
-
-<p>
-  <b>Wifi rating:</b>
-  <%= @share.wifi_rating %>
-</p>
-
-<p>
-  <b>User rating:</b>
-  <%= @share.user_rating %>
-</p>
-
-<p>
-  <b>Network name:</b>
-  <%= @share.network_name %>
-</p>
-
-<p>
-  <b>Network password:</b>
-  <%= @share.network_password %>
-</p>
 
 
-<%= link_to 'Edit', edit_share_path(@share) %> |
-<%= link_to 'Back', shares_path %>
+
+
+<div class="match_box">
+
+  <div class="s">You have a Match. </div>
+
+  <div class="s"> Network info</div>
+  <div class="s">
+    <b>Network name:</b>
+   <%= @share.network_name %>
+  </div>
+
+  <div class="s">
+    <b>Network password:</b>
+    <%= @share.network_password %>
+  </div>
+  <div class="s">
+    <%= link_to 'Edit', edit_share_path(@share) %>
+  </div>
+</div>
+
+
+

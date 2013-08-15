@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
 
 
 <div class="details_box">
 <p class="details">
 
 
-  You will be riding train #<%= @trip.train_id %> departing <%= @trip.on_station %> at <%= @trip.on_station_time %> and will be arriving at <%= @trip.off_station %> at <%= @trip.off_station_time %> and you will be needing wifi for <%= @trip.wifi_duration %> minutes.
+  <p class="details">You will be riding train #<%= @trip.train_id %> </p>
+  <p class="details">departing <%= @trip.on_station %> at <%= @trip.on_station_time %> </p>
+  <p class="details"> and will be arriving at <%= @trip.off_station %> at <%= @trip.off_station_time %> </p>
+  <p class="details"> and you will be needing wifi for <%= @trip.wifi_duration %> minutes.</p>
 </p>
 
 <div class="details">
-Anyone providers on this train?
-</  div>
-<div class="details">
 
-<%= link_to 'Match', match_trip_path(@trip) %>
+<%= link_to 'Match Me', match_trip_path(@trip) %>
 </div>
 </div>
 <!-- <p>

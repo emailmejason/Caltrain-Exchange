@@ -1,4 +1,27 @@
-<p id="notice"><%= notice %></p>
+
+
+<div class="details_box">
+
+  <div class="details">
+  This is when you can offer your wifi:
+
+  <div class="details">
+
+<p class="details">
+
+
+  You ride the #<%= @offer.train_id %> that departs <%= @offer.on_station %> at <%= @offer.on_station_time %> and arrives <%= @offer.off_station %> at <%= @offer.off_station_time %>.
+</p>
+
+<%= link_to 'Do I have a match? ', share_path(@offer) %> |
+<%= link_to 'Edit', edit_offer_path(@offer) %>
+
+</div>
+</div>
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <b>Offer.id:</b>
@@ -34,6 +57,5 @@
   <%= @offer.off_station_time %>
 </p>
 
-<%= link_to 'Shares', share_path(@offer) %> |
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+
+ -->

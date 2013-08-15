@@ -11,18 +11,21 @@
     </div>
   <% end %>
 
-
+  <div id="form">
   <div class="field">
-    <%= f.label :on_station %><br />
     <%= f.text_field :on_station %>
+    <div class="l">Leaving from</div>
+
   </div>
   <div class="field">
-    <%= f.label :on_station_time %><br />
     <%= f.text_field :on_station_time%>
+    <div class="l">Time</div>
+
   </div>
   <div class="field">
-    <%= f.label :off_station %><br />
     <%= f.text_field :off_station %>
+    <div class="l">Arriving at</div>
+
   </div>
   <div class="actions">
     <%= f.hidden_field :user_id, :value => current_user.id %>

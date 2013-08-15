@@ -11,31 +11,19 @@
     </div>
   <% end %>
 
+<div class id="form">
   <div class="field">
-    <%= f.label :trip_id %><br />
-    <%= f.number_field :trip_id %>
-  </div>
-  <div class="field">
-    <%= f.label :offer_id %><br />
-    <%= f.number_field :offer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :wifi_rating %><br />
-    <%= f.number_field :wifi_rating %>
-  </div>
-  <div class="field">
-    <%= f.label :user_rating %><br />
-    <%= f.number_field :user_rating %>
-  </div>
-  <div class="field">
-    <%= f.label :network_name %><br />
     <%= f.text_field :network_name %>
+    <div class="l">Network Name</div>
+
   </div>
   <div class="field">
-    <%= f.label :network_password %><br />
     <%= f.text_field :network_password %>
+    <div class="l">Network ID</div>
+
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

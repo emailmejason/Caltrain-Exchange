@@ -1,7 +1,4 @@
-</br>
-</br>
-</br>
-<h1>Listing offers</h1>
+<div class="description">I have wifi that I don't use!</div>
 <div class="o_box">
 
     <div class="s"><%= link_to 'New Offer', new_offer_path %></div>
@@ -11,11 +8,9 @@
 
     <div><%= offer.user_id %></div>
 
-    <div class="s">Email: <%= User.find(offer.user_id).email %></div>
-    <div class="s">Train: <%= Train.find(offer.train_id).number %></div>
     <div class="s"> Leaving from <%= offer.on_station %></div>
     <div class="s">Arriving at <%= offer.off_station %></div>
-    <div class="s"><%= link_to 'Show', offer %></div>
+    <div class="s"><%= link_to 'Details', offer %></div>
     <div class="s"><%= link_to 'Edit', edit_offer_path(offer) %></div>
 
 <% end %>

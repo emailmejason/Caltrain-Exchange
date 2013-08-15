@@ -1,9 +1,9 @@
 <div class="details_box">
   <h1>MATCHED!</h1>
-   <h1>HERE IS YOUR MATCH - <%= @trip.matching_offers.first.user.email %>
+   <h1>here is your match <%= @trip.matching_offers.first.user.email %>
    </h1>
 
-    <div><%= link_to 'Official Shares', share_path(@trip) %></div>
+    <div class="s"><%= link_to 'See Network Info', share_path(@trip) %></div>
 
   <%= form_for(@share) do |f| %>
     <% if @share.errors.any? %>
@@ -25,8 +25,7 @@
       <%= f.hidden_field :offer_id,:value=>@trip.matching_offers.first.id %>
     </div>
 
-    <div class="actions">
+    <div class="actions" >
       <%= f.submit %>
     </div>
   <% end %>
-</>div
