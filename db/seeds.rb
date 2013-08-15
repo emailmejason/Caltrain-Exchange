@@ -56,7 +56,7 @@ trains.each do |x|
 end
 
 User.create!(username: "David Smith",email: "davidsmith@gmail.com", password:"1")
-User.create!(username: "Michael Jones",email: "michaeljones@gmail.com", password:"1")
+User.create!(username: "Jason Gem",email: "jason@yahoo.com", password:"1")
 User.create!(username: "Chris Lee",email: "chrislee@gmail.com", password:"1")
 User.create!(username: "Mike Lim",email: "mikelim@gmail.com", password:"1")
 User.create!(username: "Mark Brown",email: "markbrown@gmail.com", password:"1")

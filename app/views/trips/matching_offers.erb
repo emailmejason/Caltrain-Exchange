@@ -1,53 +1,32 @@
-<h1>MATCHED!</h1>
- <h1>HERE IS YOUR MATCH - <%= @trip.matching_offers.first.user.email %>
- </h1>
- <h2><%= @trip %></h2>
+<div class="details_box">
+  <h1>MATCHED!</h1>
+   <h1>HERE IS YOUR MATCH - <%= @trip.matching_offers.first.user.email %>
+   </h1>
 
-<table>
-  <tr>
-    <th></th>
-    <td>Email</td>
+    <div><%= link_to 'Official Shares', share_path(@trip) %></div>
 
-    <th>On Time</th>
-    <th>Off Time</th>
-  </tr>
+  <%= form_for(@share) do |f| %>
+    <% if @share.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@share.errors.count, "error") %> prohibited this share from being saved:</h2>
 
-    <tr>
-      <td><%= @trip.matching_offers.first.user.email %></td>
-      <td><%= @trip.matching_offers.first.on_station %></td>
-      <td><%= @trip.matching_offers.first.on_station_time %></td>
+        <ul>
+        <% @share.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <td><%= @trip.matching_offers.first.off_station %></td>
-      <td><%= @trip.matching_offers.first.off_station_time %></td>
-      <td>offer.id <%= @trip.matching_offers.first.id %></td>
-      <td>trip.id <%= @trip.id %></td>
+    <div class="field">
+      <%= f.hidden_field :trip_id,:value=>@trip.id %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :offer_id,:value=>@trip.matching_offers.first.id %>
+    </div>
 
-
-    </tr>
-</table>
-  <div><%= link_to 'Official Shares', share_path(@trip) %></div>
-
-<%= form_for(@share) do |f| %>
-  <% if @share.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@share.errors.count, "error") %> prohibited this share from being saved:</h2>
-
-      <ul>
-      <% @share.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.hidden_field :trip_id,:value=>@trip.id %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :offer_id,:value=>@trip.matching_offers.first.id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</>div

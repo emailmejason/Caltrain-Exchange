@@ -10,39 +10,30 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+  <div id="signup_form">
 
-
-<div id="form">
-  <%= form_tag sessions_path do %>
     <div class="field">
-      <%= text_field_tag :email, params[:email] %>
+      <%= f.text_field :username %>
+      <div class="l">username</div>
+
+    </div>
+    <div class="field">
+      <%= f.text_field :email %>
       <div class="l">email</div>
 
     </div>
     <div class="field">
-      <%= password_field_tag :password %>
+      <%= f.password_field :password %>
       <div class="l">password</div>
 
     </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation %>
+      <div class="l">pswd con</div>
 
-    <div class="actions"><%= submit_tag "Log in" %></div>
+    </div>
+    <div class="actions"><%= f.submit %></div>
   <% end %>
 </div>
+<div class="signup_quote"> I make 10 dollars everyday on my commute.</div>
+<div class="signup_quote"> "BoxCarWifi has helped me not get fired"</div>
