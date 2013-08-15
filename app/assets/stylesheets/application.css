@@ -44,3 +44,9 @@ img{
   width:100%;
   display: block;
 }
+
+#toy {
+  border: 2px solid black;
+  margin: 0 auto;
+  width: 400px;
+}
